@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template, Response
 from main import take_in_log
 from db import init_db, get_problems, add_new
+import time
 
 app = Flask(__name__, template_folder="static")
 
@@ -27,7 +28,8 @@ def problems():
     end_index = start_index + per_page
     problems = get_problems()
     paginated_problems = problems[start_index:end_index]
-    
+    #to make the infinite scrolling obvious
+    time.sleep(1)
     return render_template('table.html', data=paginated_problems, page=page)
 
 if __name__ == '__main__':
