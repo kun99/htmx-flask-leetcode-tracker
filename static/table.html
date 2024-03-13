@@ -1,6 +1,6 @@
 {% for problem in data %}
 {% if loop.last %}
-  <!-- <tr hx-get="/problems" hx-trigger="revealed" class="border text-left px-8 py-4"> -->
+  <tr hx-get="/problems/?page={{ page + 1 }}" hx-trigger="revealed" hx-swap="afterend" class="border text-left px-8 py-4">
 {% else %}
   <tr class="border text-left px-8 py-4">
 {% endif %}
