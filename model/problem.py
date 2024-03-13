@@ -3,7 +3,7 @@ from sqlalchemy.orm import declarative_base
 
 Base = declarative_base()
 
-class Problem():
+class Problem(Base):
     __tablename__ = "problems"
     id = Column(Integer, primary_key=True)
     name= Column(String(50), unique=True)

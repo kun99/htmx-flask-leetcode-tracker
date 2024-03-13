@@ -18,7 +18,7 @@ def new_problem():
     return render_template('table.html', data=problems)
     
 @app.route('/problems', methods=['GET'])
-def get_problems():
+def problems():
     problems = get_problems()
     table_html = render_template('table.html', data=problems)
     return table_html

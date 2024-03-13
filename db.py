@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 from model.problem import Base, Problem
 
-engine = create_engine('sqlite://')
+engine = create_engine('sqlite:///problems.db')
 sess = Session(bind=engine)
 
 def init_db():
