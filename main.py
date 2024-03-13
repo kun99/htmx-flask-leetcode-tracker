@@ -1,4 +1,3 @@
-from bs4 import BeautifulSoup
 from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
@@ -29,4 +28,5 @@ def take_in_log():
             difficulty = "Hard"
     print(f"{x}\n{name.text} - {difficulty}")
     driver.quit()
+
 take_in_log()
