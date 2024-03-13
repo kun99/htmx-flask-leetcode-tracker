@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, jsonify
 from main import take_in_log
 from db import init_db, get_problems, add_new
 from model import problem
@@ -20,8 +20,7 @@ def new_problem():
 @app.route('/problems', methods=['GET'])
 def problems():
     problems = get_problems()
-    table_html = render_template('table.html', data=problems)
-    return table_html
+    return render_template('table.html', data=problems)
 
 if __name__ == '__main__':
     init_db()

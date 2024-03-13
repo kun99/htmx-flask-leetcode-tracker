@@ -26,7 +26,7 @@
       </div>
     </div>
     <div>
-      <table>
+      <table id="problems-table">
         <thead>
           <tr>
             <th>Name</th>
@@ -34,7 +34,12 @@
             <th>Date</th>
           </tr>
         </thead>
-        <tbody hx-get="/problems">
+        <tbody
+          hx-get="/problems"
+          hx-trigger="load"
+          hx-target="#problems-table tbody"
+        >
+          {% include 'table.html' %}
         </tbody>
       </table>
     </div>
