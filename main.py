@@ -5,12 +5,12 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 
-def take_in_log(url):
+def take_in_log(link):
     x = datetime.now()
     x = x.strftime("%d/%m/%y %A")
         
     driver = webdriver.Chrome()
-    driver.get(url)
+    driver.get(link)
     name = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.CLASS_NAME, 'no-underline.hover\\:text-blue-s.dark\\:hover\\:text-dark-blue-s.truncate.cursor-text.whitespace-normal.hover\\:\\!text-\\[inherit\\]'))
     )

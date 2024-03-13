@@ -1,7 +1,9 @@
 from sqlalchemy import Column, Integer, String
-from db import Base
+from sqlalchemy.orm import declarative_base
 
-class Problem(Base):
+Base = declarative_base()
+
+class Problem():
     __tablename__ = "problems"
     id = Column(Integer, primary_key=True)
     name= Column(String(50), unique=True)
