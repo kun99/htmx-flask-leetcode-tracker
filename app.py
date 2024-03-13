@@ -1,7 +1,6 @@
-from flask import Flask, request, render_template, jsonify
+from flask import Flask, request, render_template
 from main import take_in_log
 from db import init_db, get_problems, add_new
-from model import problem
 
 app = Flask(__name__, template_folder="static")
 

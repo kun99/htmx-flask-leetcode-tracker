@@ -18,7 +18,6 @@ def take_in_log(link):
         name = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.CLASS_NAME, 'no-underline.hover\\:text-blue-s.dark\\:hover\\:text-dark-blue-s.truncate.cursor-text.whitespace-normal.hover\\:\\!text-\\[inherit\\]'))
         )
-        name = driver.find_element(By.CLASS_NAME, 'no-underline.hover\\:text-blue-s.dark\\:hover\\:text-dark-blue-s.truncate.cursor-text.whitespace-normal.hover\\:\\!text-\\[inherit\\]')
         try:
             driver.find_element(By.CLASS_NAME, 'relative.inline-flex.items-center.justify-center.text-caption.px-2.py-1.gap-1.rounded-full.bg-fill-secondary.text-difficulty-easy.dark\:text-difficulty-easy')
             difficulty = "Easy"

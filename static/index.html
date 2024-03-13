@@ -12,7 +12,7 @@
       <div class="flex justify-center py-6 bg-orange-100 w-[400px]">
         <div>
           <h1 class="text-3xl font-bold">Leetcode Tracker</h1>
-          <form hx-post="/log" hx-target="tbody" hx-swap="outerHTML">
+          <form hx-post="/log" hx-target="#problems-table tbody">
             <label>Problem URL:</label><br />
             <input type="text" name="problem_url" class="bg-slate-100" /><br />
             <button
