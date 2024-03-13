@@ -16,10 +16,18 @@ def new_problem():
     problems = get_problems()
     return render_template('table.html', data=problems)
     
-@app.route('/problems', methods=['GET'])
+@app.route('/problems/', methods=['GET'])
 def problems():
+    page = int(request.args.get('page', 1))
+    per_page = 10
+
+    start_index = (page - 1) * per_page
+    end_index = start_index + per_page
+
     problems = get_problems()
-    return render_template('table.html', data=problems)
+    paginated_problems = problems[start_index:end_index]
+    print(paginated_problems)
+    return render_template('table.html', data=paginated_problems)
 
 if __name__ == '__main__':
     init_db()

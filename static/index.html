@@ -33,11 +33,7 @@
               <th>Date</th>
             </tr>
           </thead>
-          <tbody
-            hx-get="/problems"
-            hx-trigger="load"
-            hx-target="#problems-table tbody"
-          >
+          <tbody hx-get="/problems" hx-trigger="load">
             {% include 'table.html' %}
           </tbody>
         </table>

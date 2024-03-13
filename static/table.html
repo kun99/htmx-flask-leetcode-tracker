@@ -1,5 +1,9 @@
 {% for problem in data %}
-<tr class="border text-left px-8 py-4">
+{% if loop.last %}
+  <!-- <tr hx-get="/problems" hx-trigger="revealed" class="border text-left px-8 py-4"> -->
+{% else %}
+  <tr class="border text-left px-8 py-4">
+{% endif %}
   <td>{{ problem.name }}</td>
   <td>{{ problem.difficulty }}</td>
   <td>{{ problem.date }}</td>
